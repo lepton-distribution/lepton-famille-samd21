@@ -1,0 +1,28 @@
+{
+  "nom": "samd21",
+  "type": "famille",
+  "version": "1.0.0",
+  "description": "Famille SAMD21 (Microchip) : couche Lepton (USART sur SERCOM), CMSIS device Microchip SAMD21_DFP 3.8.270 (cmsis-5). Le DFP exige CMSIS-Core 5 : inclusion posée par le BSP.",
+  "destination": "kernel/dev/arch/cortexm/samd21",
+  "bibliotheque": "kernel",
+  "sources": [
+    "dev_samd21/dev_samd21_uart_x.c"
+  ],
+  "dependances": [
+    "lepton-noyau"
+  ],
+  "coeurs": [
+    "cortex-m0plus"
+  ],
+  "mcu": [
+    "ATSAMD21J18A"
+  ],
+  "compilation": {
+    "publique": {
+      "inclusions": [
+        "kernel/dev/arch/cortexm/samd21/dev_samd21",
+        "kernel/core/ucore/cmsis-5/Device/Microchip/SAMD21/include"
+      ]
+    }
+  }
+}
